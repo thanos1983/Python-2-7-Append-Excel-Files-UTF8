@@ -1,8 +1,5 @@
 import glob
 import pandas as pd
-import numpy as np
-
-import pprint
 
 # get all files from current dir
 path = './'
@@ -31,24 +28,3 @@ worksheet = writer.sheets['Sheet1']
 
 # Close the Pandas Excel writer and output the Excel file.
 writer.save()
-
-"""tempCSV = 'tempCSV.csv'
-data_xls = pd.read_excel(appendedXlsxFile, index_col=None)
-data_xls.to_csv(tempCSV, encoding='utf-8')
-
-os.remove(appendedXlsxFile)
-
-delimiter = ','
-csvFile = codecs.open('final.csv', 'w', encoding='utf-8')
-reader = codecs.open(tempCSV, 'r', encoding='utf-8')
-for line in reader:
-    row = line.split(delimiter)
-    if row[1] in (None, ""):
-        continue
-    else:
-        line = delimiter.join(row)
-        print(row)
-        csvFile.write(line)
-csvFile.close()
-
-os.remove(tempCSV)"""
